@@ -1,5 +1,11 @@
 function findShortestString(arr) {
-  // type your code here
+  let comparison = arr[0];
+  for (i = 1; i < arr.length; i++) {
+    if (arr[i].length < comparison.length) {
+      comparison = arr[i]
+    }
+  }
+  return comparison
 }
 
 if (require.main === module) {
@@ -23,4 +29,13 @@ if (require.main === module) {
 module.exports = findShortestString;
 
 // Please add your pseudocode to this file
+
+/************************************* 
+initialize empty variable to hold comparison value
+
+iterate through array:
+compare lengths of elements
+if length is less than the comparison value, reassign comparison value
+
+**************************************/
 // And a written explanation of your solution
